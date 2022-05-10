@@ -1,0 +1,98 @@
+/*
+QUESTION 1-----
+SELECT COUNT(*)
+FROM data_analyst_jobs;
+
+QUESTION 2-----
+SELECT *
+FROM data_analyst_jobs
+LIMIT 10
+
+XTO Land Data Analyst
+
+QUESTION 3-----
+SELECT COUNT(*)
+FROM data_analyst_jobs
+WHERE location = 'TN';
+
+SELECT COUNT(*)
+FROM data_analyst_jobs
+WHERE location IN('TN', 'KY');
+
+QUESTION 4-----
+SELECT COUNT(*)
+FROM data_analyst_jobs
+WHERE location = 'TN'
+AND star_rating > 4
+
+QUESTION 5-----
+SELECT COUNT(*)
+FROM data_analyst_jobs
+WHERE review_count BETWEEN 500 AND 1000;
+
+QUESTION 6-----
+SELECT location AS state, AVG(star_rating) AS avg_rating
+FROM data_analyst_jobs
+GROUP BY location
+ORDER BY AVG(star_rating);
+
+West Virginia and Hawaii are tied for having the highest average rating.
+
+QUESTION 7-----
+SELECT DISTINCT company
+FROM data_analyst_jobs;
+
+SELECT COUNT(DISTINCT company)
+FROM data_analyst_jobs;
+=1088
+
+QUESTION 8-----
+SELECT COUNT(DISTINCT title)
+FROM data_analyst_jobs
+WHERE location = 'CA';
+
+SELECT COUNT(DISTINCT title)
+FROM data_analyst_jobs
+WHERE review_count > 5000;
+
+QUESTION 9-----
+SELECT title, AVG(star_rating)
+FROM data_analyst_jobs
+GROUP BY title, review_count
+HAVING SUM(review_count) > 5000;
+
+QUESTION 10-----
+SELECT title, AVG(star_rating)
+FROM data_analyst_jobs
+GROUP BY title, review_count
+HAVING SUM(review_count) > 5000
+ORDER BY AVG(star_rating) DESC;
+
+Data Analyst, Users and Products - 4.30 stars
+
+QUESTION 11-----
+SELECT title
+FROM data_analyst_jobs
+WHERE title LIKE '%Analyst%'
+OR title LIKE '%ANALYST%';
+
+SELECT COUNT(title)
+FROM data_analyst_jobs
+WHERE title LIKE '%Analyst%'
+OR title LIKE '%ANALYST%';
+
+QUESTION 12-----
+SELECT COUNT(title)
+FROM data_analyst_jobs
+WHERE title NOT LIKE '%Analyst%'
+AND title NOT LIKE '%ANALYST%'
+AND title NOT LIKE '%ANALYTICS%'
+AND title NOT LIKE '%Analytics%';
+
+SELECT title
+FROM data_analyst_jobs
+WHERE title NOT LIKE '%Analyst%'
+AND title NOT LIKE '%ANALYST%'
+AND title NOT LIKE '%ANALYTICS%'
+AND title NOT LIKE '%Analytics%';
+*/
